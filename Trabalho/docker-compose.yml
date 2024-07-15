@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  frontend:
+   build:
+     "./frontend/Crud-Api-C3"
+   ports:
+    - "3000:3000"
+
+  backend:
+   build:
+     context: ./backend/ProjectApi
+     dockerfile: ProjectApi/Dockerfile
+   ports:
+    - "32769:8080"
